@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A14F6E341CA8DC26006D8F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E331CA8DC26006D8F51 /* main.m */; };
+		A14F6E371CA8DC26006D8F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E361CA8DC26006D8F51 /* AppDelegate.m */; };
+		A14F6E3A1CA8DC26006D8F51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E391CA8DC26006D8F51 /* ViewController.m */; };
+		A14F6E3D1CA8DC26006D8F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F6E3B1CA8DC26006D8F51 /* Main.storyboard */; };
+		A14F6E3F1CA8DC26006D8F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14F6E3E1CA8DC26006D8F51 /* Assets.xcassets */; };
+		A14F6E421CA8DC26006D8F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14F6E401CA8DC26006D8F51 /* LaunchScreen.storyboard */; };
+		A14F6E4D1CA8DC27006D8F51 /* AYPageControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E4C1CA8DC27006D8F51 /* AYPageControlTests.m */; };
+		A14F6E581CA8DC27006D8F51 /* AYPageControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E571CA8DC27006D8F51 /* AYPageControlUITests.m */; };
+		A14F6E6A1CA8DC45006D8F51 /* AYCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E671CA8DC45006D8F51 /* AYCircleLayer.m */; };
+		A14F6E6B1CA8DC45006D8F51 /* AYCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E691CA8DC45006D8F51 /* AYCircleView.m */; };
+		A14F6E721CA902A0006D8F51 /* AYPageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E711CA902A0006D8F51 /* AYPageControlView.m */; };
+		A14F6E751CA902C4006D8F51 /* AYLineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E741CA902C4006D8F51 /* AYLineLayer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A14F6E491CA8DC26006D8F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A14F6E271CA8DC26006D8F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A14F6E2E1CA8DC26006D8F51;
+			remoteInfo = AYPageControl;
+		};
+		A14F6E541CA8DC27006D8F51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A14F6E271CA8DC26006D8F51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A14F6E2E1CA8DC26006D8F51;
+			remoteInfo = AYPageControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A14F6E2F1CA8DC26006D8F51 /* AYPageControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AYPageControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F6E331CA8DC26006D8F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A14F6E351CA8DC26006D8F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A14F6E361CA8DC26006D8F51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A14F6E381CA8DC26006D8F51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A14F6E391CA8DC26006D8F51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A14F6E3C1CA8DC26006D8F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A14F6E3E1CA8DC26006D8F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A14F6E411CA8DC26006D8F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A14F6E431CA8DC26006D8F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14F6E481CA8DC26006D8F51 /* AYPageControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYPageControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F6E4C1CA8DC27006D8F51 /* AYPageControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYPageControlTests.m; sourceTree = "<group>"; };
+		A14F6E4E1CA8DC27006D8F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14F6E531CA8DC27006D8F51 /* AYPageControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AYPageControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A14F6E571CA8DC27006D8F51 /* AYPageControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AYPageControlUITests.m; sourceTree = "<group>"; };
+		A14F6E591CA8DC27006D8F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A14F6E661CA8DC45006D8F51 /* AYCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYCircleLayer.h; sourceTree = "<group>"; };
+		A14F6E671CA8DC45006D8F51 /* AYCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYCircleLayer.m; sourceTree = "<group>"; };
+		A14F6E681CA8DC45006D8F51 /* AYCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AYCircleView.h; path = AnimaView/AYCircleView.h; sourceTree = "<group>"; };
+		A14F6E691CA8DC45006D8F51 /* AYCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AYCircleView.m; path = AnimaView/AYCircleView.m; sourceTree = "<group>"; };
+		A14F6E6F1CA8FEC5006D8F51 /* AYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYPageControl.h; sourceTree = "<group>"; };
+		A14F6E701CA902A0006D8F51 /* AYPageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYPageControlView.h; sourceTree = "<group>"; };
+		A14F6E711CA902A0006D8F51 /* AYPageControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYPageControlView.m; sourceTree = "<group>"; };
+		A14F6E731CA902C4006D8F51 /* AYLineLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYLineLayer.h; sourceTree = "<group>"; };
+		A14F6E741CA902C4006D8F51 /* AYLineLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYLineLayer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A14F6E2C1CA8DC26006D8F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E451CA8DC26006D8F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E501CA8DC27006D8F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		116EBCBEBE509F9A8974457E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A14F6E261CA8DC26006D8F51 = {
+			isa = PBXGroup;
+			children = (
+				A14F6E311CA8DC26006D8F51 /* AYPageControl */,
+				A14F6E4B1CA8DC26006D8F51 /* AYPageControlTests */,
+				A14F6E561CA8DC27006D8F51 /* AYPageControlUITests */,
+				A14F6E301CA8DC26006D8F51 /* Products */,
+				116EBCBEBE509F9A8974457E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A14F6E301CA8DC26006D8F51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E2F1CA8DC26006D8F51 /* AYPageControl.app */,
+				A14F6E481CA8DC26006D8F51 /* AYPageControlTests.xctest */,
+				A14F6E531CA8DC27006D8F51 /* AYPageControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A14F6E311CA8DC26006D8F51 /* AYPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E681CA8DC45006D8F51 /* AYCircleView.h */,
+				A14F6E691CA8DC45006D8F51 /* AYCircleView.m */,
+				A14F6E651CA8DC45006D8F51 /* AnimaView */,
+				A14F6E351CA8DC26006D8F51 /* AppDelegate.h */,
+				A14F6E361CA8DC26006D8F51 /* AppDelegate.m */,
+				A14F6E381CA8DC26006D8F51 /* ViewController.h */,
+				A14F6E391CA8DC26006D8F51 /* ViewController.m */,
+				A14F6E3B1CA8DC26006D8F51 /* Main.storyboard */,
+				A14F6E3E1CA8DC26006D8F51 /* Assets.xcassets */,
+				A14F6E401CA8DC26006D8F51 /* LaunchScreen.storyboard */,
+				A14F6E431CA8DC26006D8F51 /* Info.plist */,
+				A14F6E321CA8DC26006D8F51 /* Supporting Files */,
+			);
+			path = AYPageControl;
+			sourceTree = "<group>";
+		};
+		A14F6E321CA8DC26006D8F51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E331CA8DC26006D8F51 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A14F6E4B1CA8DC26006D8F51 /* AYPageControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E4C1CA8DC27006D8F51 /* AYPageControlTests.m */,
+				A14F6E4E1CA8DC27006D8F51 /* Info.plist */,
+			);
+			path = AYPageControlTests;
+			sourceTree = "<group>";
+		};
+		A14F6E561CA8DC27006D8F51 /* AYPageControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E571CA8DC27006D8F51 /* AYPageControlUITests.m */,
+				A14F6E591CA8DC27006D8F51 /* Info.plist */,
+			);
+			path = AYPageControlUITests;
+			sourceTree = "<group>";
+		};
+		A14F6E651CA8DC45006D8F51 /* AnimaView */ = {
+			isa = PBXGroup;
+			children = (
+				A14F6E6F1CA8FEC5006D8F51 /* AYPageControl.h */,
+				A14F6E661CA8DC45006D8F51 /* AYCircleLayer.h */,
+				A14F6E671CA8DC45006D8F51 /* AYCircleLayer.m */,
+				A14F6E731CA902C4006D8F51 /* AYLineLayer.h */,
+				A14F6E741CA902C4006D8F51 /* AYLineLayer.m */,
+				A14F6E701CA902A0006D8F51 /* AYPageControlView.h */,
+				A14F6E711CA902A0006D8F51 /* AYPageControlView.m */,
+			);
+			path = AnimaView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A14F6E2E1CA8DC26006D8F51 /* AYPageControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14F6E5C1CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControl" */;
+			buildPhases = (
+				A14F6E2B1CA8DC26006D8F51 /* Sources */,
+				A14F6E2C1CA8DC26006D8F51 /* Frameworks */,
+				A14F6E2D1CA8DC26006D8F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AYPageControl;
+			productName = AYPageControl;
+			productReference = A14F6E2F1CA8DC26006D8F51 /* AYPageControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A14F6E471CA8DC26006D8F51 /* AYPageControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14F6E5F1CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControlTests" */;
+			buildPhases = (
+				A14F6E441CA8DC26006D8F51 /* Sources */,
+				A14F6E451CA8DC26006D8F51 /* Frameworks */,
+				A14F6E461CA8DC26006D8F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A14F6E4A1CA8DC26006D8F51 /* PBXTargetDependency */,
+			);
+			name = AYPageControlTests;
+			productName = AYPageControlTests;
+			productReference = A14F6E481CA8DC26006D8F51 /* AYPageControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A14F6E521CA8DC27006D8F51 /* AYPageControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A14F6E621CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControlUITests" */;
+			buildPhases = (
+				A14F6E4F1CA8DC27006D8F51 /* Sources */,
+				A14F6E501CA8DC27006D8F51 /* Frameworks */,
+				A14F6E511CA8DC27006D8F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A14F6E551CA8DC27006D8F51 /* PBXTargetDependency */,
+			);
+			name = AYPageControlUITests;
+			productName = AYPageControlUITests;
+			productReference = A14F6E531CA8DC27006D8F51 /* AYPageControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A14F6E271CA8DC26006D8F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Andy;
+				TargetAttributes = {
+					A14F6E2E1CA8DC26006D8F51 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					A14F6E471CA8DC26006D8F51 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A14F6E2E1CA8DC26006D8F51;
+					};
+					A14F6E521CA8DC27006D8F51 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A14F6E2E1CA8DC26006D8F51;
+					};
+				};
+			};
+			buildConfigurationList = A14F6E2A1CA8DC26006D8F51 /* Build configuration list for PBXProject "AYPageControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A14F6E261CA8DC26006D8F51;
+			productRefGroup = A14F6E301CA8DC26006D8F51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A14F6E2E1CA8DC26006D8F51 /* AYPageControl */,
+				A14F6E471CA8DC26006D8F51 /* AYPageControlTests */,
+				A14F6E521CA8DC27006D8F51 /* AYPageControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A14F6E2D1CA8DC26006D8F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F6E421CA8DC26006D8F51 /* LaunchScreen.storyboard in Resources */,
+				A14F6E3F1CA8DC26006D8F51 /* Assets.xcassets in Resources */,
+				A14F6E3D1CA8DC26006D8F51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E461CA8DC26006D8F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E511CA8DC27006D8F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A14F6E2B1CA8DC26006D8F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F6E751CA902C4006D8F51 /* AYLineLayer.m in Sources */,
+				A14F6E6B1CA8DC45006D8F51 /* AYCircleView.m in Sources */,
+				A14F6E3A1CA8DC26006D8F51 /* ViewController.m in Sources */,
+				A14F6E371CA8DC26006D8F51 /* AppDelegate.m in Sources */,
+				A14F6E341CA8DC26006D8F51 /* main.m in Sources */,
+				A14F6E6A1CA8DC45006D8F51 /* AYCircleLayer.m in Sources */,
+				A14F6E721CA902A0006D8F51 /* AYPageControlView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E441CA8DC26006D8F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F6E4D1CA8DC27006D8F51 /* AYPageControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A14F6E4F1CA8DC27006D8F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14F6E581CA8DC27006D8F51 /* AYPageControlUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A14F6E4A1CA8DC26006D8F51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A14F6E2E1CA8DC26006D8F51 /* AYPageControl */;
+			targetProxy = A14F6E491CA8DC26006D8F51 /* PBXContainerItemProxy */;
+		};
+		A14F6E551CA8DC27006D8F51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A14F6E2E1CA8DC26006D8F51 /* AYPageControl */;
+			targetProxy = A14F6E541CA8DC27006D8F51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A14F6E3B1CA8DC26006D8F51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14F6E3C1CA8DC26006D8F51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A14F6E401CA8DC26006D8F51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A14F6E411CA8DC26006D8F51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A14F6E5A1CA8DC27006D8F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A14F6E5B1CA8DC27006D8F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A14F6E5D1CA8DC27006D8F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYPageControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A14F6E5E1CA8DC27006D8F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AYPageControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A14F6E601CA8DC27006D8F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AYPageControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYPageControl.app/AYPageControl";
+			};
+			name = Debug;
+		};
+		A14F6E611CA8DC27006D8F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AYPageControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AYPageControl.app/AYPageControl";
+			};
+			name = Release;
+		};
+		A14F6E631CA8DC27006D8F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AYPageControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AYPageControl;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A14F6E641CA8DC27006D8F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AYPageControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Andy.AYPageControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = AYPageControl;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A14F6E2A1CA8DC26006D8F51 /* Build configuration list for PBXProject "AYPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F6E5A1CA8DC27006D8F51 /* Debug */,
+				A14F6E5B1CA8DC27006D8F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14F6E5C1CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F6E5D1CA8DC27006D8F51 /* Debug */,
+				A14F6E5E1CA8DC27006D8F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14F6E5F1CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F6E601CA8DC27006D8F51 /* Debug */,
+				A14F6E611CA8DC27006D8F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A14F6E621CA8DC27006D8F51 /* Build configuration list for PBXNativeTarget "AYPageControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A14F6E631CA8DC27006D8F51 /* Debug */,
+				A14F6E641CA8DC27006D8F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A14F6E271CA8DC26006D8F51 /* Project object */;
+}
