@@ -2,6 +2,8 @@
 [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/AYJk/AYPageControl/blob/master/License)&nbsp;
 [![SUPPORT](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg)](https://en.wikipedia.org/wiki/IOS_7)&nbsp;
 [![BLOG](https://img.shields.io/badge/blog-ayjkdev.top-orange.svg)](http://ayjkdev.top/)&nbsp;
+
+
 一个有动效的PageControl，效果图如下：
 
 ![效果图](http://7xrofo.com1.z0.glb.clouddn.com/d454ds88.gif)
