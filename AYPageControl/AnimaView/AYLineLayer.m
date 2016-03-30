@@ -8,7 +8,7 @@
 
 #import "AYLineLayer.h"
 
-#define ballDistance (self.frame.size.width -  self.ballDiameter * self.numberOfPages) / self.numberOfPages
+#define BallCenterDistance self.frame.size.width / (self.numberOfPages + 1)
 @implementation AYLineLayer
 
 - (instancetype)init {
@@ -22,7 +22,6 @@
     }
     return self;
 }
-
 /**
  *  必须重载，调用drawInContext前必定调用此方法获取上一个状态
  */
@@ -60,17 +59,17 @@
         if (index == self.currentPage - 1) {
             continue;
         }
-        CGPathAddEllipseInRect(linePath, NULL, CGRectMake(index * (ballDistance + self.ballDiameter * .5) + ballDistance, self.frame.size.height * .5 - self.ballDiameter * .5, self.ballDiameter, self.ballDiameter));
+        CGPathAddEllipseInRect(linePath, NULL, CGRectMake((index + 1)* BallCenterDistance  - self.ballDiameter * .5, self.frame.size.height * .5 - self.ballDiameter * .5, self.ballDiameter, self.ballDiameter));
     }
     CGContextAddPath(ctx, linePath);
     CGContextSetFillColorWithColor(ctx, self.unSelectedColor.CGColor);
     CGContextFillPath(ctx);
     
-    CGMutablePathRef firtstLinePath = CGPathCreateMutable();
-    CGPathAddEllipseInRect(firtstLinePath, NULL, CGRectMake((self.currentPage - 1) * (ballDistance + self.ballDiameter * .5) + ballDistance, self.frame.size.height * .5 - self.ballDiameter * .5, self.ballDiameter, self.ballDiameter));
-    CGContextAddPath(ctx, firtstLinePath);
-    CGContextSetFillColorWithColor(ctx, self.selectedColor.CGColor);
-    CGContextFillPath(ctx);
+//    CGMutablePathRef firtstLinePath = CGPathCreateMutable();
+//    CGPathAddEllipseInRect(firtstLinePath, NULL, CGRectMake((self.currentPage - 1) * (ballDistance + self.ballDiameter * .5) + ballDistance, self.frame.size.height * .5 - self.ballDiameter * .5, self.ballDiameter, self.ballDiameter));
+//    CGContextAddPath(ctx, firtstLinePath);
+//    CGContextSetFillColorWithColor(ctx, self.selectedColor.CGColor);
+//    CGContextFillPath(ctx);
 }
 
 @end

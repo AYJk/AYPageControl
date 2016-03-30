@@ -30,14 +30,10 @@
 
 - (void)setContentOffset_x:(CGFloat)contentOffset_x {
     
-//    NSLog(@"%f",contentOffset_x);
     if (_contentOffset_x != contentOffset_x) {
         _contentOffset_x = contentOffset_x;
         self.circleLayer.contentOffset_x = self.contentOffset_x;
         [self calculateProgress];
-//        if ((int)_contentOffset_x % (int)self.bindingScrollView.frame.size.width == 0) {
-//            self.circleLayer.currentProgress = .5;
-//        }
     }
 }
 
@@ -72,8 +68,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-        
-        self.backgroundColor = [UIColor redColor];
         [self configCircleView:frame];
     }
     return self;

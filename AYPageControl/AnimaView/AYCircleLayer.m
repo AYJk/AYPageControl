@@ -8,7 +8,7 @@
 
 #import "AYCircleLayer.h"
 #import <UIKit/UIKit.h>
-#define AnimaBallDistance (self.frame.size.width -  self.outsideRectSize * self.numberOfPages) / self.numberOfPages
+#define AnimaBallDistance self.frame.size.width / (self.numberOfPages + 1)
 /**
     动画向左或右移动
  */
@@ -18,7 +18,6 @@ typedef enum : NSUInteger {
 } Move_Direction;
 
 @interface AYCircleLayer ()
-
 /**
  *  移动方向
  */
@@ -36,7 +35,6 @@ typedef enum : NSUInteger {
 - (instancetype)init {
     
     if (self = [super init]) {
-        self.backgroundColor = [UIColor colorWithRed:123/255.0 green:100/255.0 blue:160/255.0 alpha:.6].CGColor;
         self.outsideRectSize = 10;
         self.currentProgress = 0;
         self.currentPage = 1;
@@ -58,18 +56,6 @@ typedef enum : NSUInteger {
 - (void)setCurrentPage:(NSInteger)currentPage {
     
     _currentPage = currentPage;
-//    CGFloat origin_y = self.position.y - self.outsideRectSize * .5;
-//    if (self.moveDirection == Move_Right) {
-//        if (_currentPage == 1) {
-//            _lastOrigin_x = (AnimaBallDistance ) * (self.currentPage - 1)  + AnimaBallDistance + self.outsideRectSize * .5;
-//        } else {
-//            _lastOrigin_x = (AnimaBallDistance ) * (self.currentPage - 2)  + AnimaBallDistance + self.outsideRectSize * .5;
-//        }
-//    } else {
-//        _lastOrigin_x = (AnimaBallDistance + self.outsideRectSize * .5) * (self.currentPage)  + AnimaBallDistance;
-//    }
-//    self.outsideRect = CGRectMake(_lastOrigin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
-//    [self setNeedsDisplay];
 }
 
 - (void)setContentOffset_x:(CGFloat)contentOffset_x {
@@ -84,19 +70,15 @@ typedef enum : NSUInteger {
     CGFloat origin_y = self.position.y - self.outsideRectSize * .5;
     CGFloat origin_x = 0;
     if ((int)contentOffset_x % (int)_bingdingScrollViewWidth == 0) {
-        _lastOrigin_x = (AnimaBallDistance + self.outsideRectSize * .5) * (self.currentPage - 1)  + AnimaBallDistance + (_currentProgress)*(AnimaBallDistance);
+        _lastOrigin_x = AnimaBallDistance * self.currentPage  + _currentProgress * AnimaBallDistance - self.outsideRectSize * .5  ;
         self.outsideRect = CGRectMake(_lastOrigin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
         self.lastContentOffset_x = self.contentOffset_x;
     } else if ((int)contentOffset_x % (int)_bingdingScrollViewWidth > 0){
         
         if (self.moveDirection == Move_Right) {
-            if (_contentOffset_x > (_numberOfPages - 1) * _bingdingScrollViewWidth) {
-                origin_x = _lastOrigin_x + (_currentProgress)*(AnimaBallDistance);
-            } else {
-                origin_x = _lastOrigin_x + _outsideRectSize * .5 + (_currentProgress)*(AnimaBallDistance);
-            }
+            origin_x = _lastOrigin_x + _currentProgress * AnimaBallDistance ;
         } else {
-            origin_x = _lastOrigin_x - _outsideRectSize * .5 - (1 - _currentProgress)*(AnimaBallDistance);
+            origin_x = _lastOrigin_x - (1 - _currentProgress)* AnimaBallDistance;
         }
         self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
     } else if ((int)contentOffset_x % (int)_bingdingScrollViewWidth < 0) {

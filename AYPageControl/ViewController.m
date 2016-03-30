@@ -39,9 +39,10 @@
         [self.view addSubview:scrollView];
         scrollView;
     });
-    self.pageControlView = [[AYPageControlView alloc] initWithFrame:CGRectMake(100, 200, 100, 40)];
+    self.pageControlView = [[AYPageControlView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 300) * .5, 200, 300, 40)];
     self.pageControlView.numberOfPages = totalPages;
     self.pageControlView.bindingScrollView = self.bannerScrollView;
+    self.pageControlView.backgroundColor = [UIColor colorWithRed:22/255.0 green:170/255.0 blue:100/255.0 alpha:1];
     [self.view addSubview:self.pageControlView];
 }
 
