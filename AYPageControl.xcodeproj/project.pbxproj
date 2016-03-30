@@ -16,7 +16,6 @@
 		A14F6E4D1CA8DC27006D8F51 /* AYPageControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E4C1CA8DC27006D8F51 /* AYPageControlTests.m */; };
 		A14F6E581CA8DC27006D8F51 /* AYPageControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E571CA8DC27006D8F51 /* AYPageControlUITests.m */; };
 		A14F6E6A1CA8DC45006D8F51 /* AYCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E671CA8DC45006D8F51 /* AYCircleLayer.m */; };
-		A14F6E6B1CA8DC45006D8F51 /* AYCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E691CA8DC45006D8F51 /* AYCircleView.m */; };
 		A14F6E721CA902A0006D8F51 /* AYPageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E711CA902A0006D8F51 /* AYPageControlView.m */; };
 		A14F6E751CA902C4006D8F51 /* AYLineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A14F6E741CA902C4006D8F51 /* AYLineLayer.m */; };
 /* End PBXBuildFile section */
@@ -57,8 +56,6 @@
 		A14F6E591CA8DC27006D8F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A14F6E661CA8DC45006D8F51 /* AYCircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYCircleLayer.h; sourceTree = "<group>"; };
 		A14F6E671CA8DC45006D8F51 /* AYCircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYCircleLayer.m; sourceTree = "<group>"; };
-		A14F6E681CA8DC45006D8F51 /* AYCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AYCircleView.h; path = AnimaView/AYCircleView.h; sourceTree = "<group>"; };
-		A14F6E691CA8DC45006D8F51 /* AYCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AYCircleView.m; path = AnimaView/AYCircleView.m; sourceTree = "<group>"; };
 		A14F6E6F1CA8FEC5006D8F51 /* AYPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AYPageControl.h; sourceTree = "<group>"; };
 		A14F6E701CA902A0006D8F51 /* AYPageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYPageControlView.h; sourceTree = "<group>"; };
 		A14F6E711CA902A0006D8F51 /* AYPageControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYPageControlView.m; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 		A14F6E311CA8DC26006D8F51 /* AYPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				A14F6E681CA8DC45006D8F51 /* AYCircleView.h */,
-				A14F6E691CA8DC45006D8F51 /* AYCircleView.m */,
 				A14F6E651CA8DC45006D8F51 /* AnimaView */,
 				A14F6E351CA8DC26006D8F51 /* AppDelegate.h */,
 				A14F6E361CA8DC26006D8F51 /* AppDelegate.m */,
@@ -309,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14F6E751CA902C4006D8F51 /* AYLineLayer.m in Sources */,
-				A14F6E6B1CA8DC45006D8F51 /* AYCircleView.m in Sources */,
 				A14F6E3A1CA8DC26006D8F51 /* ViewController.m in Sources */,
 				A14F6E371CA8DC26006D8F51 /* AppDelegate.m in Sources */,
 				A14F6E341CA8DC26006D8F51 /* main.m in Sources */,

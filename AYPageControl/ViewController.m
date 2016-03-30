@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "AYCircleView.h"
 #import "AYPageControl.h"
 #define totalPages 4
 @interface ViewController () <UIScrollViewDelegate>
@@ -48,18 +47,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-    NSLog(@"%f",scrollView.contentOffset.x);
+//    NSLog(@"%f",scrollView.contentOffset.x);
     self.pageControlView.contentOffset_x = scrollView.contentOffset.x;
-}
-
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    
-//    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    
-//    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
 }
 
 - (void)didReceiveMemoryWarning {
