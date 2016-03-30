@@ -53,7 +53,7 @@
 - (void)calculateProgress {
     
     CGFloat pageWidth = self.bindingScrollView.frame.size.width;
-    int currentPage = floor((self.contentOffset_x - pageWidth / 2) / pageWidth) + 2;
+    int currentPage = floor((self.contentOffset_x - pageWidth * .5) / pageWidth) + 2;
     self.currentPage = currentPage;
 }
 

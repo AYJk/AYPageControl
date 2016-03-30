@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "AYPageControl.h"
-#define totalPages 4
+#define totalPages 6
 @interface ViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) AYPageControlView *pageControlView;

@@ -23,7 +23,9 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) Move_Direction moveDirection;
 @property (nonatomic, assign) CGFloat outsideRectSize;
-@property (nonatomic, assign) CGFloat lastOrigin_x;
+//@property (nonatomic, assign) CGFloat lastOrigin_x;
+@property (nonatomic, assign) CGFloat factor;
+@property (nonatomic, assign) NSInteger lastPage;
 /**
  *  查询，设置是否要切换当前的currentPage
  */
@@ -38,6 +40,7 @@ typedef enum : NSUInteger {
         self.outsideRectSize = 10;
         self.currentProgress = 0;
         self.currentPage = 1;
+        self.lastPage = _currentPage;
     }
     return self;
 }
@@ -53,11 +56,6 @@ typedef enum : NSUInteger {
     return self;
 }
 
-- (void)setCurrentPage:(NSInteger)currentPage {
-    
-    _currentPage = currentPage;
-}
-
 - (void)setContentOffset_x:(CGFloat)contentOffset_x {
     
     _contentOffset_x = contentOffset_x;
@@ -66,29 +64,17 @@ typedef enum : NSUInteger {
     } else if (_contentOffset_x - _lastContentOffset_x <= 0) {
         self.moveDirection = Move_Left;
     }
-    _currentProgress = (int)((self.contentOffset_x / _bingdingScrollViewWidth) * 1000) % 1000 * .001;
+    _currentProgress = MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
+    CGFloat origin_x = (self.contentOffset_x / _bingdingScrollViewWidth)*(self.frame.size.width / (_numberOfPages + 1)) + AnimaBallDistance;
     CGFloat origin_y = self.position.y - self.outsideRectSize * .5;
-    CGFloat origin_x = 0;
-    if ((int)contentOffset_x % (int)_bingdingScrollViewWidth == 0) {
-        _lastOrigin_x = AnimaBallDistance * self.currentPage  + _currentProgress * AnimaBallDistance - self.outsideRectSize * .5  ;
-        self.outsideRect = CGRectMake(_lastOrigin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
+    NSLog(@"%f",_currentProgress);
+    if ((int)contentOffset_x % (int)_bingdingScrollViewWidth == 0 || _lastPage != _currentPage) {
         self.lastContentOffset_x = self.contentOffset_x;
-    } else if ((int)contentOffset_x % (int)_bingdingScrollViewWidth > 0){
-        
-        if (self.moveDirection == Move_Right) {
-            origin_x = _lastOrigin_x + _currentProgress * AnimaBallDistance ;
-        } else {
-            origin_x = _lastOrigin_x - (1 - _currentProgress)* AnimaBallDistance;
-        }
-        self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
-    } else if ((int)contentOffset_x % (int)_bingdingScrollViewWidth < 0) {
-        if (self.moveDirection == Move_Right) {
-            origin_x = _lastOrigin_x + (_currentProgress)*(AnimaBallDistance);
-        } else {
-            origin_x = _lastOrigin_x - (ABS(_currentProgress))*(AnimaBallDistance);
-        }
-        self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
+        self.currentProgress = 0;
     }
+    self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
+    _lastPage = _currentPage;
+    NSLog(@"%f",origin_x);
     [self setNeedsDisplay];
 }
 
