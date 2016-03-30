@@ -48,7 +48,6 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
-//    NSLog(@"%f",scrollView.contentOffset.x);
     self.pageControlView.contentOffset_x = scrollView.contentOffset.x;
 }
 

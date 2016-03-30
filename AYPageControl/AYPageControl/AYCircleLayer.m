@@ -67,14 +67,12 @@ typedef enum : NSUInteger {
     _currentProgress = MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
     CGFloat origin_x = (self.contentOffset_x / _bingdingScrollViewWidth)*(self.frame.size.width / (_numberOfPages + 1)) + AnimaBallDistance;
     CGFloat origin_y = self.position.y - self.outsideRectSize * .5;
-    NSLog(@"%f",_currentProgress);
     if ((int)contentOffset_x % (int)_bingdingScrollViewWidth == 0 || _lastPage != _currentPage) {
         self.lastContentOffset_x = self.contentOffset_x;
         self.currentProgress = 0;
     }
     self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
     _lastPage = _currentPage;
-    NSLog(@"%f",origin_x);
     [self setNeedsDisplay];
 }
 
