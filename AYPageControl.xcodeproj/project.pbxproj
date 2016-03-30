@@ -119,7 +119,7 @@
 		A14F6E311CA8DC26006D8F51 /* AYPageControl */ = {
 			isa = PBXGroup;
 			children = (
-				A14F6E651CA8DC45006D8F51 /* AnimaView */,
+				A14F6E651CA8DC45006D8F51 /* AYPageControl */,
 				A14F6E351CA8DC26006D8F51 /* AppDelegate.h */,
 				A14F6E361CA8DC26006D8F51 /* AppDelegate.m */,
 				A14F6E381CA8DC26006D8F51 /* ViewController.h */,
@@ -159,7 +159,7 @@
 			path = AYPageControlUITests;
 			sourceTree = "<group>";
 		};
-		A14F6E651CA8DC45006D8F51 /* AnimaView */ = {
+		A14F6E651CA8DC45006D8F51 /* AYPageControl */ = {
 			isa = PBXGroup;
 			children = (
 				A14F6E6F1CA8FEC5006D8F51 /* AYPageControl.h */,
@@ -170,7 +170,7 @@
 				A14F6E701CA902A0006D8F51 /* AYPageControlView.h */,
 				A14F6E711CA902A0006D8F51 /* AYPageControlView.m */,
 			);
-			path = AnimaView;
+			path = AYPageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
