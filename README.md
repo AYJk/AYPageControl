@@ -31,6 +31,7 @@ self.pageControlView.bindingScrollView = self.bannerScrollView;
 ###v0.0.2
   
   * 优化了滑动视图时，小球的形变动画。
+
 ###v0.0.1
   
   * 首次提交：实现动画
