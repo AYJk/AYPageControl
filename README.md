@@ -8,6 +8,10 @@
 一个有动效的PageControl，效果图如下：
 
 ![效果图](http://7xrofo.com1.z0.glb.clouddn.com/version002.gif)
+
+##我的blog中有相关的内容讲解
+[一个水滴动效的pageController（一）](http://ayjkdev.top/2016/03/25/ios-animation-circle-view/)
+
 ##如何使用
 ###1.导入头文件
 ```objc
@@ -25,7 +29,7 @@ self.pageControlView.selectedColor = [UIColor blackColor];
 self.pageControlView.unSelectedColor = [UIColor lightGrayColor];
 ```
 ###3.在代理方法中设置pageControl的属性
-```
+```objc
 //	将scrollview的contentOffset.x赋值给pageControl进行计算
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
