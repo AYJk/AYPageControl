@@ -19,6 +19,10 @@
 self.pageControlView.numberOfPages = totalPages;
 //	绑定对应的scrollview
 self.pageControlView.bindingScrollView = self.bannerScrollView;
+//  设置形变小球的颜色
+self.pageControlView.selectedColor = [UIColor blackColor];
+//  设置背景小球的颜色
+self.pageControlView.unSelectedColor = [UIColor lightGrayColor];
 ```
 ###3.在代理方法中设置pageControl的属性
 ```
