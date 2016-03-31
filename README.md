@@ -28,7 +28,18 @@ self.pageControlView.unSelectedColor = [UIColor lightGrayColor];
 ```
 //	将scrollview的contentOffset.x赋值给pageControl进行计算
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
     self.pageControlView.contentOffset_x = scrollView.contentOffset.x;
+}
+//  scrollview滑动玩后将最终的contentOffset传递过去
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
+}
+//  scrollview滑动玩后将最终的contentOffset传递过去（暂时未用到，后期添加功能使用）
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    
+    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
 }
 ```
 ##更新内容
