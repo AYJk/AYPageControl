@@ -7,7 +7,7 @@
 
 一个有动效的PageControl，效果图如下：
 
-![效果图](http://7xrofo.com1.z0.glb.clouddn.com/d454ds88.gif)
+![效果图](http://7xrofo.com1.z0.glb.clouddn.com/version002.gif)
 ##如何使用
 ###1.导入头文件
 ```objc
