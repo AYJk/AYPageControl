@@ -65,6 +65,18 @@
 
 }
 
+- (void)setSelectedColor:(UIColor *)selectedColor {
+    
+    _selectedColor = selectedColor;
+    self.circleLayer.selectedColor = _selectedColor;
+}
+
+- (void)setUnSelectedColor:(UIColor *)unSelectedColor {
+    
+    _unSelectedColor = unSelectedColor;
+    self.lineLayer.unSelectedColor = unSelectedColor;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {

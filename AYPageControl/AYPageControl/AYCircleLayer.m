@@ -7,7 +7,7 @@
 //
 
 #import "AYCircleLayer.h"
-#import <UIKit/UIKit.h>
+
 #define AnimaBallDistance self.frame.size.width / (self.numberOfPages + 1)
 /**
     动画向左或右移动
@@ -23,9 +23,7 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, assign) Move_Direction moveDirection;
 @property (nonatomic, assign) CGFloat outsideRectSize;
-//@property (nonatomic, assign) CGFloat lastOrigin_x;
 @property (nonatomic, assign) CGFloat factor;
-@property (nonatomic, assign) NSInteger lastPage;
 /**
  *  查询，设置是否要切换当前的currentPage
  */
@@ -40,7 +38,6 @@ typedef enum : NSUInteger {
         self.outsideRectSize = 10;
         self.currentProgress = 0;
         self.currentPage = 1;
-        self.lastPage = _currentPage;
     }
     return self;
 }
@@ -56,23 +53,41 @@ typedef enum : NSUInteger {
     return self;
 }
 
+- (void)setLastContentOffset_x:(CGFloat)lastContentOffset_x {
+    
+    _lastContentOffset_x = lastContentOffset_x;
+//    self.currentProgress = 0;
+//    [self setNeedsDisplay];
+}
+
 - (void)setContentOffset_x:(CGFloat)contentOffset_x {
     
     _contentOffset_x = contentOffset_x;
+    
     if (_contentOffset_x - _lastContentOffset_x > 0) {
         self.moveDirection = Move_Right;
+        if (_contentOffset_x <= _bingdingScrollViewWidth * ((self.lastContentOffset_x / _bingdingScrollViewWidth) + .5)) {
+            _currentProgress = MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
+        } else {
+            _currentProgress = 1 - MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
+        }
     } else if (_contentOffset_x - _lastContentOffset_x <= 0) {
+        NSInteger lastPage = (_contentOffset_x / _bingdingScrollViewWidth + 2);
+        
         self.moveDirection = Move_Left;
+        if (_contentOffset_x < lastPage * _bingdingScrollViewWidth - _bingdingScrollViewWidth * 1.5 && _contentOffset_x > 0) {
+            _currentProgress = 1 - MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
+        } else {
+             _currentProgress = MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
+        }
+        if (_currentProgress > .9) {
+            _currentProgress = 0;
+        }
     }
-    _currentProgress = MIN(1, MAX(0, (ABS(contentOffset_x - _lastContentOffset_x) / _bingdingScrollViewWidth)));
-    CGFloat origin_x = (self.contentOffset_x / _bingdingScrollViewWidth)*(self.frame.size.width / (_numberOfPages + 1)) + AnimaBallDistance;
+    CGFloat origin_x = (self.contentOffset_x / _bingdingScrollViewWidth)*(self.frame.size.width / (_numberOfPages + 1)) + AnimaBallDistance - self.outsideRectSize * .5;
     CGFloat origin_y = self.position.y - self.outsideRectSize * .5;
-    if ((int)contentOffset_x % (int)_bingdingScrollViewWidth == 0 || _lastPage != _currentPage) {
-        self.lastContentOffset_x = self.contentOffset_x;
-        self.currentProgress = 0;
-    }
     self.outsideRect = CGRectMake(origin_x, origin_y, self.outsideRectSize, self.outsideRectSize);
-    _lastPage = _currentPage;
+
     [self setNeedsDisplay];
 }
 
@@ -81,16 +96,7 @@ typedef enum : NSUInteger {
 //    计算出偏移值
     CGFloat offset = self.outsideRect.size.width / 3.6;
 //    计算出移动距离
-    CGFloat moveDistance = 0;
-    if (self.moveDirection == Move_Right && self.currentProgress != 0) {
-        if (_contentOffset_x > (_numberOfPages - 1) * _bingdingScrollViewWidth) {
-            moveDistance = (self.outsideRect.size.width / 6) * fabs(self.currentProgress) * 2;
-        }else {
-            moveDistance = (self.outsideRect.size.width / 6) * fabs(1 - self.currentProgress) * 2;
-        }
-    } else {
-        moveDistance = (self.outsideRect.size.width / 6) * fabs(self.currentProgress) * 2;
-    }
+    CGFloat moveDistance = (self.outsideRect.size.width / 6) * fabs(self.currentProgress) * 2;
 //    计算出中心点坐标
     CGPoint rectCenter = CGPointMake(self.outsideRect.origin.x + self.outsideRect.size.width * .5, self.outsideRect.origin.y + self.outsideRect.size.height * .5);
 //    计算各个辅助点坐标
@@ -114,10 +120,9 @@ typedef enum : NSUInteger {
     [ovalPath addCurveToPoint:point_D controlPoint1:point_c5 controlPoint2:point_c6];
     [ovalPath addCurveToPoint:point_A controlPoint1:point_c7 controlPoint2:point_c8];
     [ovalPath closePath];
-    
     CGContextAddPath(ctx, ovalPath.CGPath);
 //    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
-    CGContextSetFillColorWithColor(ctx, [UIColor yellowColor].CGColor);
+    CGContextSetFillColorWithColor(ctx, self.selectedColor.CGColor);
     CGContextFillPath(ctx);
 }
 

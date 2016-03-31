@@ -7,7 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-
+#import <UIKit/UIKit.h>
 @interface AYCircleLayer : CALayer
 
 /**
@@ -33,4 +33,8 @@
  *  pageControl绑定scrollView的宽度
  */
 @property (nonatomic, assign) CGFloat bingdingScrollViewWidth;
+/**
+ *  选中的颜色
+ */
+@property (nonatomic, strong) UIColor *selectedColor;
 @end

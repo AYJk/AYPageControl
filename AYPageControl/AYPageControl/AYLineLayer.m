@@ -7,8 +7,15 @@
 //
 
 #import "AYLineLayer.h"
-
 #define BallCenterDistance self.frame.size.width / (self.numberOfPages + 1)
+
+@interface AYLineLayer ()
+/**
+ *  选中的颜色
+ */
+@property (nonatomic, strong) UIColor *selectedColor;
+@end
+
 @implementation AYLineLayer
 
 - (instancetype)init {
@@ -45,6 +52,12 @@
     
     if (_currentPage != currentPage) {
         _currentPage = currentPage;
+        if (_currentPage <= 0) {
+            _currentPage = 1;
+        }
+        if (_currentPage >= _numberOfPages + 1) {
+            _currentPage = _numberOfPages;
+        }
         [self setNeedsDisplay];
     }
 }

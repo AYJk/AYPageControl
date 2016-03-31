@@ -42,6 +42,8 @@
     self.pageControlView = [[AYPageControlView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 300) * .5, 200, 300, 40)];
     self.pageControlView.numberOfPages = totalPages;
     self.pageControlView.bindingScrollView = self.bannerScrollView;
+    self.pageControlView.selectedColor = [UIColor blackColor];
+    self.pageControlView.unSelectedColor = [UIColor lightGrayColor];
     self.pageControlView.backgroundColor = [UIColor colorWithRed:22/255.0 green:170/255.0 blue:100/255.0 alpha:1];
     [self.view addSubview:self.pageControlView];
 }
@@ -49,6 +51,16 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 
     self.pageControlView.contentOffset_x = scrollView.contentOffset.x;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    
+    self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
 }
 
 - (void)didReceiveMemoryWarning {

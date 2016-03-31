@@ -21,10 +21,7 @@
  *  圆圈直径
  */
 @property (nonatomic, assign) CGFloat ballDiameter;
-/**
- *  选中的颜色
- */
-@property (nonatomic, strong) UIColor *selectedColor;
+
 /**
  *  未选中的颜色
  */
