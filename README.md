@@ -46,6 +46,12 @@ self.pageControlView.unSelectedColor = [UIColor lightGrayColor];
     self.pageControlView.lastContentOffset_x = scrollView.contentOffset.x;
 }
 ```
+##安装
+AYPageControl支持[CocoaPods](https://cocoapods.org/)，在Podfile中输入
+```objc
+pod 'AYPageControl'
+```
+
 ##更新内容
 ###v0.0.2
   
